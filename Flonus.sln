@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22512.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flonus.Core", "Flonus.Core\Flonus.Core.csproj", "{CB5F5C94-8834-46FC-AFB3-D743E71EFC9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flonus.Tests", "Flonus.Tests\Flonus.Tests.csproj", "{DFF0474F-B976-4623-9D0D-CA92C56703C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB5F5C94-8834-46FC-AFB3-D743E71EFC9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB5F5C94-8834-46FC-AFB3-D743E71EFC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB5F5C94-8834-46FC-AFB3-D743E71EFC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB5F5C94-8834-46FC-AFB3-D743E71EFC9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFF0474F-B976-4623-9D0D-CA92C56703C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF0474F-B976-4623-9D0D-CA92C56703C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF0474F-B976-4623-9D0D-CA92C56703C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF0474F-B976-4623-9D0D-CA92C56703C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
