@@ -1,10 +1,7 @@
-﻿using System;
+﻿using Flonus.Core;
+using System;
 
-using Flonus.Core;
-
-using Should;
-
-namespace Flonus.Tests
+namespace Flonus.ReferenceApp.Core
 {
     public interface IMoveableFile { }
     public interface IMovedFile { }
@@ -21,5 +18,4 @@ namespace Flonus.Tests
             throw new NotImplementedException();
         }
     }
-
 }
