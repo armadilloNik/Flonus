@@ -1,5 +1,8 @@
 ﻿using System;
+
 using Flonus.Core;
+
+using Should;
 
 namespace Flonus.Tests
 {
