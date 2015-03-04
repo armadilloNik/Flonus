@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flonus.Tests", "Flonus.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flonus.ReferenceApp.Core", "Flonus.ReferenceApp.Core\Flonus.ReferenceApp.Core.csproj", "{D924AA5E-F290-44B6-9FF6-AED91E6C4D6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flonus.ReferenceApp", "Flonus.ReferenceApp\Flonus.ReferenceApp.csproj", "{7FF3003B-F12F-4466-A093-00FD3BA6664C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D924AA5E-F290-44B6-9FF6-AED91E6C4D6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D924AA5E-F290-44B6-9FF6-AED91E6C4D6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D924AA5E-F290-44B6-9FF6-AED91E6C4D6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FF3003B-F12F-4466-A093-00FD3BA6664C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FF3003B-F12F-4466-A093-00FD3BA6664C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FF3003B-F12F-4466-A093-00FD3BA6664C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FF3003B-F12F-4466-A093-00FD3BA6664C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
