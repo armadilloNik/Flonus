@@ -1,4 +1,5 @@
-﻿using Flonus.ReferenceApp.Core;
+﻿using System;
+using Flonus.ReferenceApp.Core;
 
 namespace Flonus.ReferenceApp
 {
@@ -10,6 +11,8 @@ namespace Flonus.ReferenceApp
             var thing = new ExcavationSite();
 
             thing.Start();
+
+            Console.ReadLine();
         }
     }
 }

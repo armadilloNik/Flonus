@@ -2,11 +2,11 @@
 
 namespace Flonus.Core
 {
-    //public interface IUnitStep
-    //{
-    //}
+    public interface IUnitStep
+    {
+    }
 
-    public interface IUnitStep<in TInput, out TOutput> // : IUnitStep
+    public interface IUnitStep<in TInput, out TOutput>  : IUnitStep
       //  where TInput : IUnitItem
       //  where TOutput : IUnitItem
     {

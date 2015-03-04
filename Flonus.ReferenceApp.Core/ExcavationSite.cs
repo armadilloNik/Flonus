@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Timers;
+
 using Flonus.Core;
 
 namespace Flonus.ReferenceApp.Core
@@ -10,20 +11,19 @@ namespace Flonus.ReferenceApp.Core
     {
     }
 
-
     public class ExcavationStep : IUnitStep<IExcavationItem, IExcavatedItem>
     {
-        public bool CanAccept(Type type)
+        bool IUnitStep<IExcavationItem, IExcavatedItem>.CanAccept(Type type)
         {
             return true;
         }
         
-        public void Accept(IExcavationItem input)
+        void IUnitStep<IExcavationItem, IExcavatedItem>.Accept(IExcavationItem input)
         {
             throw new NotImplementedException();
         }
 
-        public IExcavatedItem Return()
+        IExcavatedItem IUnitStep<IExcavationItem, IExcavatedItem>.Return()
         {
             throw new NotImplementedException();
         }
@@ -37,7 +37,7 @@ namespace Flonus.ReferenceApp.Core
     {
         private readonly Timer _timer;
         private readonly Stack<IUnitItem> _workItems;
-        private readonly List<IUnitStep<IUnitItem, IUnitItem>>  _steps; 
+        private readonly List<IUnitStep>  _steps; 
         
         public ExcavationSite()
         {
@@ -48,9 +48,9 @@ namespace Flonus.ReferenceApp.Core
 
             var step = new ExcavationStep();
 
-            _steps = new List<IUnitStep<IUnitItem, IUnitItem>> { step };
+            _steps = new List<IUnitStep> { step };
 
-            int a = 0;
+           
         }
 
         public void Start()
@@ -67,9 +67,9 @@ namespace Flonus.ReferenceApp.Core
 
             var nextWorkItem = _workItems.Pop();
 
-            var workItemHandler = _steps.First();
+            var workItemHandler = _steps.First() is IUnitStep<IUnitItem, IExcavatedItem>;
 
-           
+            int a = 0;
 
         }
     }
