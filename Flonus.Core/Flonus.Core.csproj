@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="IFlonusBootstrapStep.cs" />
     <Compile Include="IUnitItem.cs" />
-    <Compile Include="IUnitStep.cs" />
+    <Compile Include="UnitStep.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

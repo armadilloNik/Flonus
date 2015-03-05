@@ -11,24 +11,21 @@ namespace Flonus.ReferenceApp.Core
     {
     }
 
-    public class ExcavationStep : IUnitStep<IExcavationItem, IExcavatedItem>
+    public class ExcavationStep : UnitStep<IExcavationItem, IExcavatedItem>
     {
-        bool IUnitStep<IExcavationItem, IExcavatedItem>.CanAccept(Type type)
-        {
-            return true;
-        }
-        
-        void IUnitStep<IExcavationItem, IExcavatedItem>.Accept(IExcavationItem input)
+        public override Type AcceptType => typeof(IExcavationItem);
+
+        public override void Accept(IExcavationItem unitItem)
         {
             throw new NotImplementedException();
         }
 
-        IExcavatedItem IUnitStep<IExcavationItem, IExcavatedItem>.Return()
+        public override IExcavatedItem Return()
         {
             throw new NotImplementedException();
         }
     }
-
+   
     public interface IExcavationSite : IFlonusBootstrapStep
     {
     }
@@ -37,7 +34,7 @@ namespace Flonus.ReferenceApp.Core
     {
         private readonly Timer _timer;
         private readonly Stack<IUnitItem> _workItems;
-        private readonly List<IUnitStep>  _steps; 
+        private static List<UnitStepBase>  _steps; 
         
         public ExcavationSite()
         {
@@ -48,15 +45,23 @@ namespace Flonus.ReferenceApp.Core
 
             var step = new ExcavationStep();
 
-            _steps = new List<IUnitStep> { step };
-
-           
+            _steps = new List<UnitStepBase> { step };
         }
 
         public void Start()
         {
             _timer.Start();
         }
+
+        static UnitStep<Tin, Tout> GetUnitStep<Tin, Tout>() 
+            where Tin : IUnitItem
+            where Tout : IUnitItem
+        {
+            var found = _steps.FindAll(step => step.AcceptType == typeof(Tin));
+
+            return (UnitStep<Tin, Tout>)found.First();
+        }
+
 
         private void OnTimerElapsed(object sender, ElapsedEventArgs e)
         {
@@ -67,7 +72,9 @@ namespace Flonus.ReferenceApp.Core
 
             var nextWorkItem = _workItems.Pop();
 
-            var workItemHandler = _steps.First() is IUnitStep<IUnitItem, IExcavatedItem>;
+            var workItemHandler = _steps.First();
+
+           
 
             int a = 0;
 
